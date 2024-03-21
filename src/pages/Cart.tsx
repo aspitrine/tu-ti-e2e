@@ -1,8 +1,8 @@
 import Button from '../components/Button';
-import useCart from '../hooks/cart';
+import useCart, { removeProduct } from '../hooks/cart';
 
 function Cart() {
-  const { products, removeProduct, totalPrice } = useCart();
+  const { products, totalPrice } = useCart();
   return (
     <div>
       <h1 className="text-2xl font-bold">Panier</h1>

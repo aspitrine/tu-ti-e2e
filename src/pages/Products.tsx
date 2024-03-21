@@ -1,9 +1,8 @@
 import Button from '../components/Button';
 import products from '../data/products';
-import useCart from '../hooks/cart';
+import { addToCart } from '../hooks/cart';
 
 function Products() {
-  const { addToCart } = useCart();
   return (
     <div>
       <h1 className="text-3xl my-4 font-bold">Liste des articles</h1>

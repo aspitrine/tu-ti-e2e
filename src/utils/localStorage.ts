@@ -1,5 +1,8 @@
 class LocalStorage {
   static getItem<T>(key: string) {
+    if (typeof localStorage === 'undefined') {
+      return null;
+    }
     const item = localStorage.getItem(key);
     if (!item) {
       return null;
@@ -9,6 +12,9 @@ class LocalStorage {
   }
 
   static setItem<T>(key: string, value: T) {
+    if (typeof localStorage === 'undefined') {
+      return;
+    }
     localStorage.setItem(key, JSON.stringify(value));
   }
 }

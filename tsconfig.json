@@ -21,6 +21,7 @@
     ".eslintrc.cjs",
     "src",
     "tailwind.config.js",
+    "vitest.config.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
