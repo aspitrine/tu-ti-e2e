@@ -72,5 +72,6 @@ module.exports = {
           'Use typed hooks `useAppDispatch` and `useAppSelector` instead.',
       },
     ],
+    'react/require-default-props': 0,
   },
 };
