@@ -19,8 +19,14 @@ jobs:
         with:
           node-version: '20.x'
           cache: 'pnpm'
-      - run: pnpm install
-      - run: pnpm test:tu
+      - name: Install dependencies
+        run: pnpm install
+      - name: TU
+        run: pnpm test:tu
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps
+      - name: Run Playwright tests
+        run: pnpm test:e2e
       - run: pnpm build
         env:
           BASE_URL: /${{ github.event.repository.name }}

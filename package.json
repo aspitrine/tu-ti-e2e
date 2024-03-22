@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "tsc --noEmit && eslint src/**/*.{ts,tsx} --cache --max-warnings=0",
     "lint:fix": "eslint ./src/**/*.{ts,tsx} --fix",
-    "test:tu": "vitest"
+    "test:tu": "vitest",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "clsx": "^2.1.0",
@@ -19,6 +20,7 @@
     "valtio": "^1.13.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.42.1",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
