@@ -9,10 +9,6 @@ describe('Cart', () => {
     cartState.products = [];
   });
 
-  it('should failed', () => {
-    expect(true).toBe(false);
-  });
-
   it('addToCart should increase the totalPrice of the cart state', () => {
     const expectedTotalPrice = products[0].price + products[1].price;
 
