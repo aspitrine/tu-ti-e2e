@@ -6,3 +6,7 @@ test('has title', async ({ page }) => {
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/O'Commerce/);
 });
+
+test('Should failed', () => {
+  expect(1).toBe(2);
+});
